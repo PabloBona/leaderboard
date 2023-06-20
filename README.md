@@ -64,7 +64,7 @@ The following stacks were used
 
 ## 🚀 Live Demo
 
-<a href="https://pablobona.github.io/LeaderBoard/dist/index.html">Live Demo</a>
+Cooming Soon>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
