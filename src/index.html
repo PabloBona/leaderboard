@@ -9,7 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="./css/index.css" />
+
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
     </style>
@@ -17,8 +17,8 @@
   <body>
     <main>
       <div class="container">
-        <div class="row">
-          <div class="col m-4"><h1>LeaderBoard</h1></div>
+        <div class="row m-4">
+          <div class="col"><h1>LeaderBoard</h1></div>
         </div>
       </div>
 
@@ -27,10 +27,12 @@
           <div class="col-6">
             <div class="score__data d-flex justify-content-between flex-row">
               <h2>Recent scores</h2>
-              <button class="button" type="button">Refresh</button>
+              <button class="button" type="button" id="refresh-btn">
+                Refresh
+              </button>
             </div>
             <div class="border border-black border-2 p-2 mt-2">
-              <ul class="scores-list mt-2">
+              <ul class="scores-list mt-2 list-unstyled">
                 <li>Name: 100</li>
                 <li>Name: 20</li>
                 <li>Name: 50</li>
@@ -51,7 +53,6 @@
                     class="form-control"
                     placeholder="Your name"
                     aria-label="Your name"
-                    aria-describedby="basic-addon1"
                   />
                 </div>
                 <div class="input-group border border-black border-2 mt-2">
@@ -60,10 +61,11 @@
                     class="form-control"
                     placeholder="Your score"
                     aria-label="Your score"
-                    aria-describedby="basic-addon1"
                   />
                 </div>
-                <button class="button mt-2" type="button">Refresh</button>
+                <div id="add-btn" class="d-flex justify-content-end">
+                  <button class="button mt-2" type="button">Refresh</button>
+                </div>
               </div>
             </div>
           </div>
