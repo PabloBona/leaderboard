@@ -1,0 +1,18 @@
+* {
+  font-family: 'Rubik', sans-serif;
+}
+
+button {
+  max-height: 2rem;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.69);
+  -webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.69);
+  -moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.69);
+}
+
+.input-group input::placeholder {
+  font-style: italic;
+}
+
+ul {
+  list-style: none;
+}
