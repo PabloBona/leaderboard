@@ -2,15 +2,13 @@ const addData = () => {
   const name = document.querySelector('#gamer-name'); // input del name
   const score = document.querySelector('#gamer-score'); // input del score
   const result = document.querySelector('#result'); // p para el result
-  const form = document.getElementById('form');
-  const scoreForm = document.getElementById('score-form');
+  const form = document.querySelector('form');
   const user = {
     score: score.value,
     user: name.value,
   };
 
   form.reset();
-  scoreForm.reset();
 
   fetch(
     'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Evaw4gPNzTGgQUofIkBp/scores/',
@@ -24,10 +22,8 @@ const addData = () => {
       if (!response.ok) {
         throw new Error('Failed to add score');
       }
-      return response.json();
-    })
-    .then(() => {
       result.innerHTML = 'Score added successfully';
+      return response.json();
     })
     .catch((error) => {
       result.innerHTML = error;

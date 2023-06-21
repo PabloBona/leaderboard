@@ -2,8 +2,8 @@ import './css/index.css';
 import addData from './modules/addData.js';
 import renderScores from './modules/renderScores.js';
 
-const refreshButton = document.querySelector('#refresh-btn');
-const addButton = document.querySelector('#adding-btn');
+const refreshButton = document.getElementById('#refresh-btn');
+const addButton = document.getElementById('#adding-btn');
 
 refreshButton.addEventListener('click', async () => {
   try {

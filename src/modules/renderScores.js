@@ -7,6 +7,3 @@ const renderScores = (scores) => {
 };
 
 export default renderScores;
-// {
-//   "result": "Game with ID: Evaw4gPNzTGgQUofIkBp added."
-// }
