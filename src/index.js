@@ -7,8 +7,11 @@ const addButton = document.querySelector('#adding-btn');
 
 refreshButton.addEventListener('click', async () => {
   try {
+    // to handle errors
     const response = await fetch(
+      // we use await before fetch function to wait the promises resolve
       'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Evaw4gPNzTGgQUofIkBp/scores/',
+      // we do a fetch to the url
     );
 
     if (!response.ok) {
@@ -16,6 +19,7 @@ refreshButton.addEventListener('click', async () => {
     }
 
     const scoresData = await response.json();
+    // use await before the promise response.json to wait the promises resolve and return Json data
     renderScores(scoresData.result);
   } catch (error) {
     renderScores(error);
