@@ -1,5 +1,5 @@
 {
-  "name": "to-do-list",
+  "name": "leaderboard",
   "version": "1.0.0",
   "description": "In this project, I will build a simple HTML list of To Do tasks. The list will be styled according to the specifications listed later in this lesson. This simple web page will be built using webpack and served by a webpack dev server.",
   "private": true,
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PabloBona/to-Do-List.git"
+    "url": "git+https://github.com/PabloBona/leaderboard.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PabloBona/to-Do-List/issues"
+    "url": "https://github.com/PabloBona/leaderboard/issues"
   },
-  "homepage": "https://github.com/PabloBona/to-Do-List#readme",
+  "homepage": "https://github.com/PabloBona/leaderboard#readme",
   "devDependencies": {
     "@babel/core": "^7.22.5",
     "@babel/preset-env": "^7.22.5",

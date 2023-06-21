@@ -12,3 +12,7 @@ button {
 .input-group input::placeholder {
   font-style: italic;
 }
+
+input {
+  width: 100%;
+}

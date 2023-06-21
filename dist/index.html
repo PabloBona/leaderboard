@@ -15,13 +15,12 @@
     </style>
   <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
   <body>
-    <main>
+    <main class="background-overlay">
       <div class="container">
         <div class="row m-4">
           <div class="col"><h1>LeaderBoard</h1></div>
         </div>
       </div>
-
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-6">
@@ -31,16 +30,8 @@
                 Refresh
               </button>
             </div>
-            <div class="border border-black border-2 p-2 mt-2">
-              <ul class="scores-list mt-2 list-unstyled">
-                <li>Name: 100</li>
-                <li>Name: 20</li>
-                <li>Name: 50</li>
-                <li>Name: 78</li>
-                <li>Name: 125</li>
-                <li>Name: 77</li>
-                <li>Name: 42</li>
-              </ul>
+            <div class="border border-black border-2 p-2 mb-4">
+              <ul id="scores-list" class="scores-list mt-2 list-unstyled"></ul>
             </div>
           </div>
           <div class="col-4">
@@ -48,26 +39,35 @@
               <h2>Add your score</h2>
               <div class="mb-3">
                 <div class="input-group border border-black border-2">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Your name"
-                    aria-label="Your name"
-                    required
-                  />
+                  <form id="form" action="">
+                    <input
+                      id="gamer-name"
+                      type="text"
+                      class="form-control"
+                      placeholder="Your name"
+                      aria-label="Your name"
+                      required
+                    />
+                  </form>
                 </div>
                 <div class="input-group border border-black border-2 mt-2">
-                  <input
-                    type="number"
-                    class="form-control"
-                    placeholder="Your score"
-                    aria-label="Your score"
-                    required
-                  />
+                  <form id="score-form" action="">
+                    <input
+                      id="gamer-score"
+                      type="number"
+                      class="form-control"
+                      placeholder="Your score"
+                      aria-label="Your score"
+                      required
+                    />
+                  </form>
                 </div>
-                <div id="add-btn" class="d-flex justify-content-end">
-                  <button class="button mt-2" type="button">Refresh</button>
+                <div class="d-flex justify-content-end">
+                  <button id="adding-btn" class="button mt-2" type="button">
+                    Add Score
+                  </button>
                 </div>
+                <p class="mt-2" id="result"></p>
               </div>
             </div>
           </div>
