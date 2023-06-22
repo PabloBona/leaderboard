@@ -2,8 +2,9 @@ import './css/index.css';
 import addData from './modules/addData.js';
 import renderScores from './modules/renderScores.js';
 
-const refreshButton = document.getElementById('#refresh-btn');
-const addButton = document.getElementById('#adding-btn');
+const refreshButton = document.getElementById('refresh-btn');
+const addButton = document.getElementById('adding-btn');
+const result = document.querySelector('#result');
 
 refreshButton.addEventListener('click', async () => {
   try {
@@ -22,7 +23,7 @@ refreshButton.addEventListener('click', async () => {
     // use await before the promise response.json to wait the promises resolve and return Json data
     renderScores(scoresData.result);
   } catch (error) {
-    renderScores(error);
+    result.innerHTML = error;
   }
 });
 
