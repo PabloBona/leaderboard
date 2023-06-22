@@ -7,7 +7,7 @@ const addData = async (name, score) => {
 
   try {
     const response = await fetch(
-      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/cppz0glf8TC5Dt1ARMD7/scores1/',
+      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/cppz0glf8TC5Dt1ARMD7/scores/',
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
