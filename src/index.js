@@ -14,11 +14,9 @@ refreshButton.addEventListener('click', async () => {
       'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Evaw4gPNzTGgQUofIkBp/scores/',
       // we do a fetch to the url
     );
-
     if (!response.ok) {
       throw new Error('Failed to fetch scores');
     }
-
     const scoresData = await response.json();
     // use await before the promise response.json to wait the promises resolve and return Json data
     renderScores(scoresData.result);
