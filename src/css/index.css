@@ -1,5 +1,5 @@
-* {
-  font-family: 'Rubik', sans-serif;
+main {
+  font-family: "Rubik", sans-serif;
 }
 
 button {
@@ -13,6 +13,6 @@ button {
   font-style: italic;
 }
 
-ul {
-  list-style: none;
+input {
+  width: 100%;
 }

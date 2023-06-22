@@ -1,7 +1,7 @@
 {
-  "name": "to-do-list",
+  "name": "leaderboard",
   "version": "1.0.0",
-  "description": "In this project, I will build a simple HTML list of To Do tasks. The list will be styled according to the specifications listed later in this lesson. This simple web page will be built using webpack and served by a webpack dev server.",
+  "description": "In this activity, I will set up a JavaScript project for my Leaderboard list app, using webpack and ES6 features, particularly modules.",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PabloBona/to-Do-List.git"
+    "url": "git+https://github.com/PabloBona/leaderboard.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PabloBona/to-Do-List/issues"
+    "url": "https://github.com/PabloBona/leaderboard/issues"
   },
-  "homepage": "https://github.com/PabloBona/to-Do-List#readme",
+  "homepage": "https://github.com/PabloBona/leaderboard#readme",
   "devDependencies": {
     "@babel/core": "^7.22.5",
     "@babel/preset-env": "^7.22.5",
@@ -31,7 +31,8 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.27.5",
-    "hint": "^2.0.0",
+    "esm": "^3.2.25",
+    "hint": "^7.1.9",
     "html-webpack-plugin": "^5.5.1",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
