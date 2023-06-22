@@ -16,20 +16,22 @@
   <body>
     <main class="background-overlay">
       <div class="container">
-        <div class="row m-4">
-          <div class="col"><h1>LeaderBoard</h1></div>
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center py-4">
+            <h1 class="py-4">New Galaga 2023 LeaderBoard</h1>
+          </div>
         </div>
       </div>
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-6">
+        <div class="row media justify-content-center">
+          <div class="col-8">
             <div class="score__data d-flex justify-content-between flex-row">
-              <h2>Recent scores</h2>
+              <h3>Recent scores</h3>
               <button class="button" type="button" id="refresh-btn">
                 Refresh
               </button>
             </div>
-            <div class="border border-black border-2 p-2 mb-4">
+            <div class="blur border border-white border-2 p-2 mb-4">
               <ul id="scores-list" class="scores-list mt-2 list-unstyled"></ul>
             </div>
           </div>

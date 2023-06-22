@@ -1,18 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cocogoose');
+
+html,
+body {
+  color: aliceblue;
+  min-height: 100vh;
+  font-family: 'cocogoose', 'Lato', sans-serif;
+  object-fit: scale-down;
+}
+
+h1 {
+  color: #8fd4fc;
+}
+
+.background-overlay {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../img/bg.jpg);
+  z-index: 1;
+}
+
 main {
-  font-family: "Rubik", sans-serif;
+  position: relative;
+  z-index: 2;
 }
 
 button {
   max-height: 2rem;
   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.69);
   -webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.69);
-  -moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.69);
+  -moz-box-shadow: 3px 3px 0 0 rgba(11, 11, 12, 0.308);
+  color: rgb(0, 0, 0);
 }
 
 .input-group input::placeholder {
   font-style: italic;
 }
 
-input {
-  width: 100%;
+.blur {
+  backdrop-filter: blur(100px);
+}
+
+@media screen and (max-width: 770px) {
+  .media {
+    flex-direction: column;
+  }
+
+  .col-8,
+  .col-6,
+  .col-4 {
+    width: 100%;
+  }
 }
