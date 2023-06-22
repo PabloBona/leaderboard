@@ -16,7 +16,7 @@ const addData = async (name, score) => {
     );
 
     if (!response.ok) {
-      throw new Error('Failed to add score');
+      throw new Error('Failed to add your score');
     }
 
     result.innerHTML = 'Score added successfully';
