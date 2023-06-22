@@ -8,24 +8,51 @@ const result = document.querySelector('#result');
 
 refreshButton.addEventListener('click', async () => {
   try {
-    // to handle errors
     const response = await fetch(
-      // we use await before fetch function to wait the promises resolve
-      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Evaw4gPNzTGgQUofIkBp/scores/',
-      // we do a fetch to the url
+      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/cppz0glf8TC5Dt1ARMD7/scores/',
     );
+
     if (!response.ok) {
       throw new Error('Failed to fetch scores');
     }
+
     const scoresData = await response.json();
-    // use await before the promise response.json to wait the promises resolve and return Json data
     renderScores(scoresData.result);
   } catch (error) {
     result.innerHTML = error;
   }
 });
 
-addButton.addEventListener('click', (e) => {
+addButton.addEventListener('click', async (e) => {
   e.preventDefault();
-  addData();
+  const nameInput = document.querySelector('#gamer-name');
+  const scoreInput = document.querySelector('#gamer-score');
+  const name = nameInput.value;
+  const score = parseInt(scoreInput.value, 10);
+
+  if (!name || !score) {
+    result.innerHTML = 'Please enter a valid name and score';
+    return;
+  }
+
+  await addData(name, score);
+  nameInput.value = '';
+  scoreInput.value = '';
+});
+
+window.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const response = await fetch(
+      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/cppz0glf8TC5Dt1ARMD7/scores/',
+    );
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch scores');
+    }
+
+    const scoresData = await response.json();
+    renderScores(scoresData.result);
+  } catch (error) {
+    result.innerHTML = error;
+  }
 });
