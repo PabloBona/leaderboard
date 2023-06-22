@@ -1,5 +1,5 @@
 const addData = async (name, score) => {
-  const result = document.querySelector('#result'); // p for the result
+  const result = document.querySelector('#result'); // <p> for the result
   const user = {
     score,
     user: name,
@@ -7,7 +7,7 @@ const addData = async (name, score) => {
 
   try {
     const response = await fetch(
-      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/cppz0glf8TC5Dt1ARMD7/scores/',
+      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/cppz0glf8TC5Dt1ARMD7/scores1/',
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -22,7 +22,9 @@ const addData = async (name, score) => {
     result.innerHTML = 'Score added successfully';
     return response.json();
   } catch (error) {
-    result.innerHTML = error;
+    result.innerHTML = `<div class="alert alert-danger" role="alert">
+     ${error}
+  </div>`;
     return null; // Return null in case of error
   }
 };

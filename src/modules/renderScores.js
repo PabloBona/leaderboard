@@ -1,8 +1,8 @@
-const renderScores = (scores) => {
+const renderScores = (usersData) => {
   const scoresList = document.getElementById('scores-list');
   let scoreHTML = '';
-  scores.forEach((score) => {
-    scoreHTML += `<li> ${score.user}: ${score.score}</li>`;
+  usersData.forEach((userData) => {
+    scoreHTML += `<li> ${userData.user}: ${userData.score}</li>`;
   });
   scoresList.innerHTML = scoreHTML;
 };

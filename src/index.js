@@ -5,6 +5,7 @@ import renderScores from './modules/renderScores.js';
 const refreshButton = document.getElementById('refresh-btn');
 const addButton = document.getElementById('adding-btn');
 const result = document.querySelector('#result');
+const form = document.querySelector('#data-form');
 
 refreshButton.addEventListener('click', async () => {
   try {
@@ -18,8 +19,13 @@ refreshButton.addEventListener('click', async () => {
 
     const scoresData = await response.json();
     renderScores(scoresData.result);
+    result.innerHTML = `<div class="alert alert-success" role="alert">
+    Sucesfully Load Name and Score
+ </div>`;
   } catch (error) {
-    result.innerHTML = error;
+    result.innerHTML = `<div class="alert alert-danger" role="alert">
+    ${error}
+ </div>`;
   }
 });
 
@@ -31,11 +37,12 @@ addButton.addEventListener('click', async (e) => {
   const score = parseInt(scoreInput.value, 10);
 
   if (!name || !score) {
-    result.innerHTML = 'Please enter a valid name and score';
+    result.innerHTML = `<div class="alert alert-danger" role="alert">
+    Please enter a valid name and score
+ </div>`;
+    form.reset();
     return;
   }
 
   await addData(name, score);
-  nameInput.value = '';
-  scoreInput.value = '';
 });
